@@ -42,7 +42,7 @@ void cargarVector(int v[], int cant){
 void mostrarVector(int v[], int cant){
     int i;
     for(i=0;i<cant;i++){
-        cout << "Ãndice[" << i<< "] = " << v[i] << endl;
+        cout << "¡ndice[" << i<< "] = " << v[i] << endl;
     }
 }
 

@@ -12,33 +12,27 @@ DÇcada 9.	(Edad 90-99)	Cantidad de encuestados: 99
 #include <iostream>
 using namespace std;
 
-//declaraci¢n de funciones
-void cargarVector(int v[], int cant);// el n√∫mero dentro del vector en esta parte se ignora
+void cargarVector(int v[], int cant);
 void mostrarVector(int v[], int cant);
 void listarRangos(int v[], int cant);
 
-
 int main(){
 
-    //DECLARAR VECTOR
 	const int TAM = 20;
 	int vNros[TAM];
 
     cargarVector(vNros, TAM);
     //mostrarVector(vNros, TAM);
-
     listarRangos(vNros, TAM);
 
 	system("pause");
 	return 0;
 }
 
-
-
 void cargarVector(int v[], int cant){
     int i;
     for(i=0;i<cant;i++){
-        cout<<"INGRESAR NUMERO ";
+        cout<<"Ingresar Edad de la persona: ";
         cin>>v[i];
     }
 }
@@ -46,11 +40,11 @@ void cargarVector(int v[], int cant){
 void mostrarVector(int v[], int cant){
     int i;
     for(i=0;i<cant;i++){
-        cout << "Vector[" << i<< "] = " << v[i] << endl;
+        cout<<v[i]<<"\n";
     }
 }
 
-
+//for para cada rango de edad y un for interno que recorre el vector y contador
 void listarRangos(int v[], int cant){
     int rango=0;
     for (int i=0;i<10;i++){
@@ -60,7 +54,9 @@ void listarRangos(int v[], int cant){
                 contador++;
             }
         }
+        //muestro el contador antes de pasar al otro rango
         if(rango==0){
+            //el primer rango comienza en 1 no en 0
             cout << "DÇcada " << i << ". (Edad " << rango+1 << "-" << rango+9 << ") Cantidad de encuestados: "<< contador<< endl;
         }else{
             cout << "DÇcada " << i << ". (Edad " << rango << "-" << rango+9 << ") Cantidad de encuestados: "<< contador<< endl;
